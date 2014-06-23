@@ -49,9 +49,10 @@
 
     mysqli_close($con);
 ?>
-                <div class='buttonbox'>
-                    <a href="add.php" class='button'>Wohnung hinzufügen</a>
-                </div>
+				<a href="add.php" class='button'>Wohnung hinzufügen</a>
+                <a href="guest/list.php" class="button">
+                    Über Ferienwohnung abstimmen
+                </a>
             </div>
             <div class="footer">
                 (c) 2014 Powerswitch Entertainment, <a href="http://www.powerswitch-entertainment.de/index.php?option=com_contact&view=contact&id=1&Itemid=54">Impressum</a>

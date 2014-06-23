@@ -3,7 +3,7 @@
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=http://www.powerswitch-entertainment.de/fewo/guest/list.php">
+        <meta http-equiv="refresh" content="2; URL=../list.php">
         <link rel="stylesheet" type="text/css" href="../../style.css">
     </head>
     <body>

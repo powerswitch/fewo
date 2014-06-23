@@ -25,33 +25,27 @@
     {
         echo "<div class='produkt'>";
         echo "<div class='title'>";
-        if (strcmp($row['aktiv'],'2') == 0)
-        {
-            echo "Überraschung: ";
-        } else {
-            echo "Wohnung: ";
-        }        
         echo $row['wohnung'] . "</div>";
         echo "<div class='change'>";
-        echo "<form name='input' action='functions/vote.php' method='post'>";
-        echo "<input type='hidden' name='id' value='$row[id]'>";
-        echo "<input type='hidden' name='up' value='1'>";
-        echo "<input class='inputfield' type='submit' value='+'>";
-        echo "</form>";
-        echo "<form name='input' action='functions/vote.php' method='post'>";
+        echo "<span class='inputtext'>Abstimmung:</span><form name='input' action='functions/vote.php' method='post' class='vote'>";
         echo "<input type='hidden' name='id' value='$row[id]'>";
         echo "<input type='hidden' name='down' value='1'>";
-        echo "<input class='inputfield' type='submit' value='-'>";
+        echo "<input class='inputfield' type='submit' value='-' id='voteleft'>";
+        echo "</form>";
+        if (strcmp($row['stimmen'],''))
+        {
+            echo "<span class='vote'>$row[stimmen]</span>";
+        }        
+        echo "<form name='input' action='functions/vote.php' method='post' class='vote'>";
+        echo "<input type='hidden' name='id' value='$row[id]'>";
+        echo "<input type='hidden' name='up' value='1'>";
+        echo "<input class='inputfield' type='submit' value='+'  id='voteright'>";
         echo "</form>";
         echo "<form name='input' action='functions/update.php' method='post'>";
         echo "<input type='hidden' name='id' value='$row[id]'>";
-        echo "<span class='inputtext'>Notizen:</span><input class='inputfield' type='text' name='notizen' placeholder='$row[notizen]' maxlength='90'>";
+        echo "<span class='inputtext'>Notizen:</span><textarea class='inputfield' name='notizen' placeholder='$row[notizen]' maxlength='90'></textarea>";
         echo "<input class='inputfield' type='submit' value='Ändern'>";
         echo "</form>";
-        if (strcmp($row['aktiv'],'2') == 0)
-        {
-            echo "<a class='inputfield' href='functions/delete.php?id=$row[id]'>Löschen</a>";
-        }
         echo "</div>";
         if (strcmp($row['kaeufer'],''))
         {
@@ -93,6 +87,9 @@
 
     mysqli_close($con);
 ?>
+                <a href="../host/list.php" class="button">
+                    Ferienwohnung hinzufügen
+                </a>            
             </div>
             <div class="footer">
                 (c) 2014 Powerswitch Entertainment, <a href="http://www.powerswitch-entertainment.de/index.php?option=com_contact&view=contact&id=1&Itemid=54">Impressum</a>
