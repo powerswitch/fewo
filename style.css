@@ -1,0 +1,123 @@
+body, html {
+    width: 100%;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    background-color: #dddddd;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    
+}
+.middle {
+    margin: auto;
+    width: 960px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+.header {
+    width: 100%;
+    font-size: 24pt;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 15px 5px 5px 30px;
+    background: rgb(125,185,232);
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,1) 100%);
+}
+.content {
+    padding: 5px;
+}
+.button {
+    background: rgba(30,87,153);
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%, rgba(21,63,110,1) 100%);
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 0px 15px 0px;
+    margin: 10px 0px 10px 0px;
+}
+.button:hover {
+    background: rgba(34,104,180);
+    background: linear-gradient(to bottom, rgba(48,148,255,1) 0%, rgba(34,104,180,1) 100%);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+.footer {
+    text-align: center;
+    width: 100%;
+    font-size: 8pt;
+    color: #FFFFFF;
+    padding: 5px 1px 1px 5px;
+    background: rgb(125,185,232);
+    background: linear-gradient(to bottom, rgba(125,185,232,1) 0%, rgba(30,87,153,1) 100%);
+}
+.produkt {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #333;
+    background-color: #f3f3f3;
+    min-height: 140px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.title {
+    font-weight: bold;
+    height: 20px;
+    padding: 3px;
+    background-color: #ddd;
+    border-bottom: solid 1px #333;
+}
+.change {
+    float: right;
+    width: 200px;
+    height: 120px;
+}
+.clear {
+    clear: both;
+}
+.bought {
+    float: left;
+    background: #844;
+    background: linear-gradient(135deg, rgba(128,64,64,1) 0%,rgba(229,229,229,0) 100%);
+    height: 120px; /* Y U NO?! */
+    width: 30px;
+    margin-right: 5px;
+}
+.free {
+    float: left;
+    background: #0f0;
+    background: linear-gradient(135deg, rgba(0,255,0,1) 0%,rgba(229,229,229,0) 100%);
+    height: 120px;
+    width: 30px;
+    margin-right: 5px;
+}
+.surprise {
+    float: left;
+    background: #00f;
+    background: linear-gradient(135deg, rgba(0,0,255,1) 0%,rgba(229,229,229,0) 100%);
+    height: 120px;
+    width: 30px;
+    margin-right: 5px;
+}
+.tag {
+    width: 150px;
+    overflow: hidden;
+    display: inline-block;
+}
+.buttonbox {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+form {
+    margin: 0px;
+}
+.inputtext {
+    font-size: 10pt;
+}
+.inputfield {
+    font-size: 9pt;
+    width: 90%;
+    height: 20px;
+}

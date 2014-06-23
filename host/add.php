@@ -1,0 +1,27 @@
+<?php include("/users/powerswitch/www/fewo/host/password_protect.php"); ?>
+<html>
+    <head>
+        <title>Ferienplaner</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="../style.css">
+    </head>
+    <body>
+        <div class="middle">
+            <div class="header">
+                Ferienplaner
+            </div>
+            <div class="content">
+                <form action="functions/insert.php" method="post">
+                <span class="tag">Wohnung:</span> <input type="text" name="wohnung" maxlength="20"><br>
+                <span class="tag">Preis:</span> <input type="text" name="preis" maxlength="8"><br>
+                <span class="tag">Link:</span> <input type="text" name="link" maxlength="90"><br>
+                <span class="tag">Beschreibung:</span> <input type="text" name="beschreibung" maxlength="200"><br>
+                <input type="submit">
+                </form>
+            </div>
+            <div class="footer">
+                (c) 2014 Powerswitch Entertainment, <a href="http://www.powerswitch-entertainment.de/index.php?option=com_contact&view=contact&id=1&Itemid=54">Impressum</a>
+            </div>
+        </div>
+    </body>
+</html>

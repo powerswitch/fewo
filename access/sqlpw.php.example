@@ -1,0 +1,5 @@
+<?php
+$sql_user = "fewo";
+$sql_pass = "bobby";
+$sql_db = "fewo";
+?>
