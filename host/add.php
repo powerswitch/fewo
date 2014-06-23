@@ -16,6 +16,7 @@
                 <span class="tag">Preis:</span> <input type="text" name="preis" maxlength="8"><br>
                 <span class="tag">Link:</span> <input type="text" name="link" maxlength="90"><br>
                 <span class="tag">Beschreibung:</span> <input type="text" name="beschreibung" maxlength="200"><br>
+                <span class="tag">Bild:</span> <input type="text" name="image" maxlength="90"><br>
                 <input type="submit">
                 </form>
             </div>

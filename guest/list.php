@@ -20,7 +20,7 @@
         echo "MySQL-Verbindungsfehler: " . mysqli_connect_error();
     }
     
-    $result = mysqli_query($con,"SELECT id, wohnung, beschreibung, preis, link, stimmen, notizen FROM fewo WHERE aktiv>0 ORDER BY stimmen DESC");    
+    $result = mysqli_query($con,"SELECT id, wohnung, beschreibung, preis, link, stimmen, notizen, image FROM fewo WHERE aktiv>0 ORDER BY stimmen DESC");    
     while($row = mysqli_fetch_array($result))
     {
         echo "<div class='produkt'>";
@@ -47,18 +47,10 @@
         echo "<input class='inputfield' type='submit' value='Ändern'>";
         echo "</form>";
         echo "</div>";
-        if (strcmp($row['kaeufer'],''))
+		if (strcmp($row['image'],''))
         {
-            if (strcmp($row['aktiv'],'2') == 0)
-            {
-                echo "<div class='surprise'>";
-            } else {
-                echo "<div class='bought'>";
-            }
-        } else {
-            echo "<div class='free'>";
-        }
-        echo "</div>";
+			echo "<div class='image'><img class='image' src='$row[image]'></div>";
+		}
         echo "<div class='details'>";
         if (strcmp($row['preis'],''))
         {

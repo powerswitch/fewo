@@ -25,11 +25,12 @@
     $preis = mysqli_real_escape_string($con, htmlspecialchars($_POST["preis"]));
     $link = mysqli_real_escape_string($con, htmlspecialchars($_POST["link"]));
     $beschreibung = mysqli_real_escape_string($con, htmlspecialchars($_POST["beschreibung"]));
+    $image = mysqli_real_escape_string($con, htmlspecialchars($_POST["image"]));
     
     
-    $sql="INSERT INTO fewo (wohnung, beschreibung, preis, link, stimmen, notizen)
+    $sql="INSERT INTO fewo (wohnung, beschreibung, preis, link, stimmen, notizen, image)
     VALUES
-    ('$wohnung','$beschreibung','$preis','$link','','')";
+    ('$wohnung','$beschreibung','$preis','$link','','','$image')";
     if (!mysqli_query($con,$sql))
     {
         die('Fehler: ' . mysqli_error($con));

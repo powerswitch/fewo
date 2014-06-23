@@ -50,7 +50,7 @@
     mysqli_close($con);
 ?>
 				<a href="add.php" class='button'>Wohnung hinzufügen</a>
-                <a href="guest/list.php" class="button">
+                <a href="../guest/list.php" class="button">
                     Über Ferienwohnung abstimmen
                 </a>
             </div>

@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS `fewo` (
   `link` varchar(90) NOT NULL,
   `stimmen` int(11) NOT NULL,
   `notizen` varchar(90) NOT NULL,
+  `image` varchar(90) NOT NULL,
   `aktiv` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 );
