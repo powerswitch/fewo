@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
@@ -12,7 +13,6 @@
             </div>
             <div class="content">
 <?php
-	session_start();
 	
 	if (isset($_SESSION['name']))
 	{

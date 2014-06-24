@@ -2,7 +2,7 @@
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=../hosts.php">
+        <meta http-equiv="refresh" content="1; URL=../hosts.php">
         <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>

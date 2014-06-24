@@ -1,8 +1,9 @@
+<?php session_start(); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=../index.php">
+        <meta http-equiv="refresh" content="1; URL=../index.php">
         <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>
@@ -13,8 +14,6 @@
             <div class="content">
                 Änderungen werden gespeichert…
 <?php
-	session_start();
-
 	include("../access/sqlpw.php");
 	$con = mysqli_connect('localhost', $sql_user, $sql_pass, $sql_db);
     if (mysqli_connect_errno())
