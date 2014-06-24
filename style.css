@@ -160,3 +160,59 @@ a:hover {
 	overflow: hidden;
 	margin-right: 15px;
 }
+.comment {
+	width: 100%;
+	display: block;
+	border-top: 1px solid  rgba(103,139,  0,1);
+	margin-top: 5px;
+	padding-top: 2px;
+}
+.cname {
+	display: inline-block;
+	width: 100px;
+    font-weight: bold;
+	color: rgba(103,139,  0,1);
+}
+.ccomment {
+	display: inline-block;
+	width: 720px;
+	margin-left: 2px;
+}
+.csubmit {
+	display: inline-block;
+	width: 100px;
+}
+.ciuser {
+	width: 100%;
+	height: 70px;
+	border: 1px solid rgba(232,252,175,1);
+}
+.cicomment {
+	width: 100%;
+	height: 70px;
+	border: 1px solid rgba(232,252,175,1);
+}
+.cisubmit {
+	width: 100%;
+	height: 70px;
+	margin-top: 20px;
+    background: rgba(162,217,  0,1);
+	border: rgba(103,139,  0,1) solid 1px;
+    color: rgba(  7, 10,  0,1);
+	cursor: pointer;
+}
+.cisubmit:hover {
+    background: rgba(199,244, 67,1);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+.cisubmitsmall {
+	width: 100%;
+    background: rgba(162,217,  0,1);
+	border: rgba(103,139,  0,1) solid 1px;
+    color: rgba(  7, 10,  0,1);
+	cursor: pointer;
+}
+.cisubmitsmall:hover {
+    background: rgba(199,244, 67,1);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}

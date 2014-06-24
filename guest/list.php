@@ -73,6 +73,32 @@
             echo "<span class='tag'>Notizen:</span>  $row[notizen]<br>";
         }
         echo "</div><div class='clear'></div>";
+        
+        $cresult = mysqli_query($con, "SELECT cid, comment, user FROM fewo_comment WHERE id=$row[id]");
+		while($crow = mysqli_fetch_array($cresult))
+		{
+			echo "<div class='comment'>";
+			echo "<div class='cname'>$crow[user]</div>";
+			echo "<div class='ccomment'>$crow[comment]</div>";
+			echo "<div class='csubmit'>";
+			echo "<form name='delcomment' action='functions/delcomment.php' method='post'>";
+			echo "<input type='hidden' name='id' value='$crow[cid]'>";
+			echo "<input type='submit' value='löschen' class='cisubmitsmall'>";
+			echo "</form></div>";
+			echo "</div>";
+		}
+        echo "<div class='comment'><form name='comment' action='functions/comment.php' method='post'>";
+        echo "<input type='hidden' name='id' value='$row[id]'>";
+        echo "<div class='cname'>Name";
+        echo "<input type='inputtext' name='user' class='ciuser' maxlength='90'>";
+        echo "</div>";
+        echo "<div class='ccomment'>Kommentar";
+        echo "<input type='inputtext' name='comment' class='cicomment' maxlength='200'>";
+        echo "</div>";
+        echo "<div class='csubmit'>";
+        echo "<input type='submit' value='kommentieren' class='cisubmit'>";
+        echo "</div>";
+        echo "</form></div>";
         echo "</div>";
     
     }
