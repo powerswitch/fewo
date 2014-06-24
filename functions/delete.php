@@ -1,10 +1,9 @@
-<?php include("/users/powerswitch/www/fewo/host/password_protect.php"); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=../list.php">
-        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <meta http-equiv="refresh" content="2; URL=../hosts.php">
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>
         <div class="middle">
@@ -14,23 +13,16 @@
             <div class="content">
                 Änderungen werden gespeichert…
 <?php
-	include("../../access/sqlpw.php");
+	include("../access/sqlpw.php");
 	$con = mysqli_connect('localhost', $sql_user, $sql_pass, $sql_db);
-	if (mysqli_connect_errno())
+    if (mysqli_connect_errno())
     {
         echo "MySQL-Verbindungsfehler: " . mysqli_connect_error();
     }
     
-    $wohnung = mysqli_real_escape_string($con, htmlspecialchars($_POST["wohnung"]));
-    $preis = mysqli_real_escape_string($con, htmlspecialchars($_POST["preis"]));
-    $link = mysqli_real_escape_string($con, htmlspecialchars($_POST["link"]));
-    $beschreibung = mysqli_real_escape_string($con, htmlspecialchars($_POST["beschreibung"]));
-    $image = mysqli_real_escape_string($con, htmlspecialchars($_POST["image"]));
-    
-    
-    $sql="INSERT INTO fewo (wohnung, beschreibung, preis, link, stimmen, notizen, image)
-    VALUES
-    ('$wohnung','$beschreibung','$preis','$link','','','$image')";
+    $id = mysqli_real_escape_string($con, $_GET["id"]);
+
+    $sql="UPDATE fewo SET aktiv='0' WHERE id='$id';";
     if (!mysqli_query($con,$sql))
     {
         die('Fehler: ' . mysqli_error($con));

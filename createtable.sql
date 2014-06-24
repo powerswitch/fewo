@@ -19,3 +19,11 @@ CREATE TABLE IF NOT EXISTS `fewo_comment` (
   PRIMARY KEY (`cid`),
   FOREIGN KEY (`id`) REFERENCES fewo(`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `fewo_vote` (
+  `user` varchar(90) NOT NULL,
+  `id` int(11) NOT NULL,
+  `val` int(11) NOT NULL,
+  PRIMARY KEY (`user`, `id`),
+  FOREIGN KEY (`id`) REFERENCES fewo(`id`)
+);

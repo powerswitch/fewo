@@ -1,10 +1,9 @@
-<?php include("/users/powerswitch/www/fewo/host/password_protect.php"); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta http-equiv="cache-control" content="no-cache">        
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div class="middle">
@@ -13,7 +12,7 @@
             </div>
             <div class="content">
 <?php
-	include("../access/sqlpw.php");
+	include("access/sqlpw.php");
 	$con = mysqli_connect('localhost', $sql_user, $sql_pass, $sql_db);
     if (mysqli_connect_errno())
     {
@@ -50,7 +49,7 @@
     mysqli_close($con);
 ?>
 				<a href="add.php" class='button'>Wohnung hinzufügen</a>
-                <a href="../guest/list.php" class="button">
+                <a href="index.php" class="button">
                     Über Ferienwohnung abstimmen
                 </a>
             </div>

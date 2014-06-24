@@ -1,10 +1,9 @@
-<?php include("/users/powerswitch/www/fewo/guest/password_protect.php"); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=../list.php">
-        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <meta http-equiv="refresh" content="2; URL=../hosts.php">
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>
         <div class="middle">
@@ -14,24 +13,26 @@
             <div class="content">
                 Änderungen werden gespeichert…
 <?php
-	include("../../access/sqlpw.php");
+	include("../access/sqlpw.php");
 	$con = mysqli_connect('localhost', $sql_user, $sql_pass, $sql_db);
 	if (mysqli_connect_errno())
     {
         echo "MySQL-Verbindungsfehler: " . mysqli_connect_error();
     }
     
-    $id = mysqli_real_escape_string($con, $_POST["id"]);
-    $user = mysqli_real_escape_string($con, htmlspecialchars($_POST["user"]));
-    $comment = mysqli_real_escape_string($con, htmlspecialchars($_POST["comment"]));
-
-    if ($comment and $user and $id)
+    $wohnung = mysqli_real_escape_string($con, htmlspecialchars($_POST["wohnung"]));
+    $preis = mysqli_real_escape_string($con, htmlspecialchars($_POST["preis"]));
+    $link = mysqli_real_escape_string($con, htmlspecialchars($_POST["link"]));
+    $beschreibung = mysqli_real_escape_string($con, htmlspecialchars($_POST["beschreibung"]));
+    $image = mysqli_real_escape_string($con, htmlspecialchars($_POST["image"]));
+    
+    
+    $sql="INSERT INTO fewo (wohnung, beschreibung, preis, link, stimmen, notizen, image)
+    VALUES
+    ('$wohnung','$beschreibung','$preis','$link','','','$image')";
+    if (!mysqli_query($con,$sql))
     {
-		$sql="INSERT INTO fewo_comment(id, user, comment) VALUES ('$id', '$user', '$comment');";
-        if (!mysqli_query($con,$sql))
-        {
-            die('Fehler: ' . mysqli_error($con));
-        }
+        die('Fehler: ' . mysqli_error($con));
     }
 
     mysqli_close($con);

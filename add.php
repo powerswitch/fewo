@@ -1,9 +1,8 @@
-<?php include("/users/powerswitch/www/fewo/host/password_protect.php"); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div class="middle">

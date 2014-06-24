@@ -2,7 +2,8 @@
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta http-equiv="refresh" content="2; URL=../index.php">
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>
         <div class="middle">
@@ -10,12 +11,12 @@
                 Ferienplaner
             </div>
             <div class="content">
-                <a href="guest/list.php" class="button">
-                    Über Ferienwohnung abstimmen
-                </a>
-                <a href="host/list.php" class="button">
-                    Ferienwohnung hinzufügen
-                </a>
+                Sie werden abgemeldet…
+<?php
+	session_start();
+	unset($_SESSION['name']);
+?>
+                <br> Vielen Dank! Sie werden zurück geleitet.
             </div>
             <div class="footer">
                 (c) 2014 Powerswitch Entertainment, <a href="http://www.powerswitch-entertainment.de/index.php?option=com_contact&view=contact&id=1&Itemid=54">Impressum</a>

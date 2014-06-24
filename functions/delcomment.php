@@ -1,10 +1,10 @@
-<?php include("/users/powerswitch/www/fewo/host/password_protect.php"); ?>
+<?php include("/users/powerswitch/www/fewo/guest/password_protect.php"); ?>
 <html>
     <head>
         <title>Ferienplaner</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta http-equiv="refresh" content="2; URL=../list.php">
-        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <meta http-equiv="refresh" content="2; URL=../index.php">
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
     <body>
         <div class="middle">
@@ -14,19 +14,22 @@
             <div class="content">
                 Änderungen werden gespeichert…
 <?php
-	include("../../access/sqlpw.php");
+	include("../access/sqlpw.php");
 	$con = mysqli_connect('localhost', $sql_user, $sql_pass, $sql_db);
-    if (mysqli_connect_errno())
+	if (mysqli_connect_errno())
     {
         echo "MySQL-Verbindungsfehler: " . mysqli_connect_error();
     }
     
-    $id = mysqli_real_escape_string($con, $_GET["id"]);
+    $cid = mysqli_real_escape_string($con, $_POST["id"]);
 
-    $sql="UPDATE fewo SET aktiv='0' WHERE id='$id';";
-    if (!mysqli_query($con,$sql))
+    if ($cid)
     {
-        die('Fehler: ' . mysqli_error($con));
+		$sql="DELETE FROM fewo_comment WHERE cid='$cid';";
+        if (!mysqli_query($con,$sql))
+        {
+            die('Fehler: ' . mysqli_error($con));
+        }
     }
 
     mysqli_close($con);
